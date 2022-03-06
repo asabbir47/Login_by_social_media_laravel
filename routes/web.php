@@ -25,7 +25,9 @@ Route::get('callback/google', [GoogleSocialiteController::class, 'handleCallback
 Route::get('auth/facebook', [FacebookSocialiteController::class, 'redirectToFB']);
 Route::get('callback/facebook', [FacebookSocialiteController::class, 'handleCallback']);
 
-
+Route::get('tinymce_example',function(){
+    return view('components/head/tinymce-config');
+});
 
 Auth::routes();
 
